@@ -1,3 +1,6 @@
+# env files
+**/.direnv
+
 # object files
 *.d
 *.o
@@ -64,6 +67,11 @@ sde_kit
 capstone
 dynamorio
 libtorch
+xed
+
+# benchmark dependencies
+gapbs
+dataset
 
 # Pin3 output
 frontend/pin-frontend/obj-intel64
