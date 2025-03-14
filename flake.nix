@@ -104,7 +104,8 @@
 
           copy_if_missing "./dataset/wiki-Vote"  ${wiki-Vote}
           copy_if_missing "./dataset/cage3"      ${cage3}
-
+	  
+	  export KMP_AFFINITY=disabled
           export SIM_ROOT=$(realpath ./)
           export SNIPER_ROOT=$(realpath $SIM_ROOT)
           export SDE_HOME=$(realpath $SIM_ROOT/sde_kit)
@@ -146,6 +147,8 @@
           pkgs.binutils
           pkgs.bzip2
           pkgs.mvapich
+	  pkgs.wget
+	  pkgs.llvmPackages.openmp
         ];
       };
     };
